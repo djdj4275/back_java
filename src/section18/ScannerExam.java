@@ -8,6 +8,7 @@ public class ScannerExam {
         // 스캐너는 java 프로그래밍 언어에서 사용자의 입력을 읽어들이는데 사용되는 기존 클래스. (java.util 패키지에 포함)
         // 이때 입력메소드를 호출할때 입력 버퍼에서 데이터를 가져와 처리함
         // 스캐너 객체 사용후에는 close() 메소드를 호출하여 자원을 반납해야함
+        // 단, 스캐너를 사용하려면 콘솔 설정을 externalTerminal 로 바꿔야함
 
         Scanner scanner = new Scanner(System.in); // 스캐너로 터미널에서 입력값을 받음
 

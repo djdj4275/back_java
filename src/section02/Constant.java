@@ -7,5 +7,6 @@ public class Constant {
     // final 사용시 변수의 값이 고정되어 바뀌지 않음 (상수가 됨) => 관례적으로 상수는 대문자 사용
     final double PI; // 여기서는 초기화만 진행하고 최초 값 설정을 아직 하지 않았기 때문에
     PI = 4.14; // 이 부분에서 값 설정시에 final이지만 error를 띄우지 않음
+    System.out.println(PI);
   }
 }

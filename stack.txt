@@ -1,0 +1,30 @@
+<IDE>
+vscode
+
+<environment>
+github
+
+<front>
+next
+
+<상태관리>
+zustand / jotai / react-query
+
+<back>
+spring boot (java)
+
+<DB>
+mysql
+
+<hosting>
+aws (ec2)
+
+<ci/cd>
+jenkins
+
+<build>
+webpack / vite
+
+<os>
+docker
+kubernetes (aws 자체에 ecs 이용도 고려)
