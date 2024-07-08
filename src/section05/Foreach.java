@@ -40,7 +40,8 @@ public class Foreach {
 
         // 멀티 스레드시의 예제
         // Runnable 인터페이스를 구현한 익명 클래스를 사용하여 스레드의 실행 로직을 정의
-        Runnable task = () -> {
+        // Runnable : java 스레드 실행을 위한 인터페이스 구현 (run 메소드 오버라이드 필요)
+        Runnable task = () -> { // runnable run 메소드를 구현
             // 5번 반복하여 실행될 코드
             for (int i = 0; i < 5; i++) {
                 // 현재 실행 중인 스레드의 이름과 반복 횟수를 출력

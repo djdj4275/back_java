@@ -40,7 +40,8 @@ public class Practice {
             비밀번호를 입력하세요: java
             확인되었습니다.
          */
-
+        
+        scanner = new Scanner(System.in);
         String correntPassword = "java";
         String password;
 
@@ -64,7 +65,7 @@ public class Practice {
             5 x 2 = 10
             ...
          */
-
+        scanner = new Scanner(System.in);
         int dan;
         System.out.println("출력할 구구단의 단을 입력하세요 : ");
         dan = scanner.nextInt();
@@ -72,6 +73,64 @@ public class Practice {
         for (int i = 0; i < 10; i++) {
             System.out.printf("%d x %d = %d\n", dan, i ,dan*i);
         }
+
+        scanner.close();
+
+        // ex4 ---------------------------------------------------------------------
+        // 1부터 10까지의 홀수의 합: 25
+        scanner = new Scanner(System.in);
+        int s = 0;
+        int start;
+        int end;
+        int q;
+
+        System.out.println("시작 값을 입력하세요.");
+        start = scanner.nextInt();
+
+        System.out.println("마지막 값을 입력하세요.");
+        end = scanner.nextInt();
+
+        System.out.println("홀수는 0, 짝수는 1를 입력하세요: ");
+        q = scanner.nextInt();
+
+        if (q == 0 || q == 1) {
+            for (int i = start; i <= end; i ++) {
+                if (i % 2 != q) {
+                    s += i;
+                }
+            }
+    
+            if (q == 0) {
+                System.out.printf("%d부터 %d까지 홀수의 합 : %d", start, end, s);
+            } else {
+                System.out.printf("%d부터 %d까지 짝수의 합 : %d", start, end, s);
+            }
+
+        } else {
+            System.out.println("입력한 값이 1, 2 이외입니다.");
+        }
+
+        
+        scanner.close();
+
+        // ex5 ---------------------------------------------------------------------
+        /* 
+            문자열을 입력하세요: java
+            문자열 뒤집기: avaj
+         */
+
+        String len;
+        String reversed = "";
+        scanner = new Scanner(System.in);
+
+        System.out.println("문자열을 입력하세요: ");
+        len = scanner.next();
+        
+        for (int i = len.length()-1; i >= 0; i--) {
+            reversed = len.charAt(i) + reversed;
+        }
+
+        System.out.println("뒤집기 : " + reversed);
 
         scanner.close();
     }

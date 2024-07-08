@@ -25,5 +25,23 @@ public class Array {
 
         int[] intArr = new int[3]; // 이런식으로 빈배열 생성도 가능 (단, 배열은 길이가 정해져있기에 길이도 정해줘야함, 빈자리에 0이 들어감)
         System.out.println(Arrays.toString(intArr)); // [0, 0, 0, 0, 0]
+
+        // ex1 ---------------------------------------------------------------------
+        char[] words = {'1', 'J', '2', 'A', '3', 'V', '4', 'A'};
+        String resultWord = "";
+
+        // for (int i = 0; i < words.length; i++) {
+        //     if ((int)words[i] >= 65 && (int)words[i] <= 90) { // 영어대문자 아스키코드의 숫자는 65~90
+        //         resultWord += words[i];
+        //     }
+        // }
+
+        for (char word : words) {
+            if ((int)word >= 65 && (int)word <= 90) {
+                resultWord += word;
+            }
+        }
+
+        System.out.println(resultWord);
     }
 }
