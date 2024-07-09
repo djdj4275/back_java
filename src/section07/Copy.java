@@ -8,13 +8,15 @@ public class Copy {
         int[] originalArray = {1, 2, 3, 4, 5};
         int[] copiedArray = originalArray; // 얕은복사 (원본 데이터의 주소(참조)만 복사되어 데이터 변경시 같은 값 공유)
 
-        // 때문에 깊은복사 (재귀적으로 새로운 메모리를 할당하겎므 복사) 하여서 전혀 다른값으로서 운용하도록 하는것이 좋음
+        // 때문에 깊은복사 (재귀적으로 새로운 메모리를 할당 복사) 하여서 전혀 다른값으로서 운용하도록 하는것이 좋음
 
-        // 이 방법 또한 얕은복사에 해당하지만 배열의 내용을 새 배열로 복사하는것이기때문에 포인터가 같진않음.
-        // 때문에 다차원배열의 경우 내부배열까지 깊은복사 하지 않기때문에 또 같은 값을 공유하게 됨
+        // 이 방법은 배열의 내용을 새 배열로 복사하는것이기때문에 포인터가 같진않지만,
+        // 다차원배열의 경우 내부배열까지 깊은복사 하지 않기때문에 또 같은 값을 공유하게 됨
         // 따로 깊은복사의 방법은 정해져있지 않고 새롭게 객체 선언후 for문 등으로 새롭게 넣어서 직접구현하거나,
         // ObjectOutputStream 이나 ObjectInputStream을 이용해서 deep copy를 구현할 수 있음
         int[] copiedArray2 = Arrays.copyOf(originalArray, originalArray.length);
+        int[] copiedArray3 = new int[3];
+        // System.arraycopy(originalArray, 0, copiedArray3, 0, originalArray.length);
 
         originalArray[0] = 100;
 
