@@ -9,7 +9,13 @@ public class Animal {
     String name; // 인스턴스 변수
     // name = "Navi"; // 클래스 필드는 이런식으로 초기화 불가함
 
+    static int age; // 이 클래스의 정적 공유값
+
     public void setName(String name) { // 메소드를 이용해서 값을 초기화 가능
         this.name = name;
+    }
+
+    public void setAge(int age) { // 메소드를 이용해서 값을 초기화 가능
+        this.age = age; // age값은 static 필드값이기때문에 어떤 객체의 필드값으로서 참조를 하는것이 아닌 Animal.age 로 참조해야 warning이 안뜸
     }
 }
