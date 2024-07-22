@@ -1,6 +1,6 @@
 package section15.Api_class;
 
-// 기본 API class
+// 기본 API class (Object 클래스)
 
 // Pbject는 java의 최상위 객체이므로 굳이 상속문구 쓰지않아도 default 값으로 붙어있음
 class Sample extends Object {
