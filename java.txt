@@ -1,0 +1,50 @@
+win + r = 실행 >> cmd
+win + e = 파일탐색기
+alt + d = 현 디렉토리 전체선택
+ctrl + , = vscode에서 setting 열기
+ctrl + shift + p 또는 f1 = vscode pallete 열기
+alt + shift + 방향키아래 = 코드열 복사
+
+javac (자바 컴파일러) : java 파일을 class파일(byte code)로 컴파일
+java : class파일을 실행
+
+
+< JDK 설치 >
+JDK란, java development kit 의 약자로, 자바 개발을 위한 소프트웨어 개발 키트(SDK)
+JRE(JVM,클래스라이브러리,기타파일) / javac, java, javadoc, jdb, jar 등등 이 들어있음
+
+ajul 에서 download (무료)
+
+< vs code 설치 >
+이후 c 또는 d 드라이브에 새폴더로 java_workspace 폴더 만든후
+현 디렉토리 전체선택에서 터미널 실행 > code .  (현 디렉토리 기준으로 vscode 실행)
+
+< 필수 extension 설치 >
+- extension pack for java
+설치하면 debugger, test runner, maven, project manager 등도 같이 설치됨
+
+- tabout
+이건 tab기능을 우측으로 한 파트마다 건너뛰게끔 바꿔줌
+
+- getter and setter generator
+접근자 메소드를 자동으로 생성해주는 도구, getter와 setter 자동생성
+
+< java 프로젝트 생성 >
+만들어둔 디렉토리 안에서 vs code 실행후 팔레트 열어서 java : create java project후
+no build tools로 프로젝트 생성
+
+< java 파일의 컴파일 및 실행 >
+java 파일이 있는 디렉토리에서 터미널을 열고
+javac 파일명(확장자까지) 하면 class파일이 생성됨.
+그리고 나서 java 파일명(확장자빼고) 하면 컴파일된 java파일(byte code)이 실행됨
+(javac가 java파일을 byte code(class파일)로 컴파일후 JVM(java virtual machine)이
+다시 그 byte code를 읽어서 컴퓨터의 기계어로 해석(binary)하여 전달)
+
+< 객체지향적 OOP (object oriented paradism) >
+절차지향적의 반대말로 절차지향적은 코드가 짜여진 위쪽부터 순서대로 실행되는것
+코드덩어리인 객체들을 하나의 클래스로 묶고 그 클래스 또한 여러개로 생성되어서
+재활용이 가능해지는걸 말함
+
+settings 메뉴에 java debug settings console 없음 
+인텔리j 와 vscode의 차이의 정도 (현업에서 필수적인지)
+final 문구 사용시 에러가 떠야하는데 에러가 뜨지 않음
